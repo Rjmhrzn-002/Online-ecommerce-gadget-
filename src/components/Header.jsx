@@ -15,7 +15,7 @@ export default function Header() {
         id="home"
         className="w-full bg-white border-b-2 border-gray-200 shadow-xl"
       >
-        <div className="max-w-[1240px] mx-auto px-2">
+        <div className="max-w-[1240px] mx-auto ">
           <div>
             <div className=" py-4 flex justify-between  ">
               {/* first div */}
@@ -69,7 +69,7 @@ export default function Header() {
             <div
               className={
                 !nav
-                  ? "fixed -left-[100%]"
+                  ? "fixed -left-[100%] top-0 duration-1000 ease-in h-full"
                   : "w-3/4  h-screen flex flex-col  bg-gray-50 text-black  border-gray-300 border-r-2 py-4 fixed top-0 left-0 z-20 duration-700 ease-in-out"
               }
             >
