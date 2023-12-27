@@ -3,9 +3,34 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(240, 239, 239);
+  background-color: rgb(240, 240, 240);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .nav-hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-hover:hover::after {
+    background-color: rgb(185, 4, 4);
+    animation: hover ease-in-out;
+  }
+
+  @keyframes hover {
+    20%,
+    80% {
+      opacity: 0;
+    }
+  }
 }
